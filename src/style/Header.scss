@@ -1,0 +1,130 @@
+.header {
+  background-color: #00093c;
+  font-weight: 500;
+  color: white;
+  height: 100px;
+  padding-top: 10px;
+
+  @media (max-width: 650px) {
+    height: 60px;
+    padding: 8px;
+  }
+
+  &__logo-icon {
+    width: 100px;
+    height: 52px;
+
+    @media (max-width: 650px) {
+      width: 57px;
+      height: 29px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &-item {
+      list-style: none;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &--with-icon {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &--active{
+      position: relative;
+    }
+
+    &--active::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, #F7941D, #27AAE1);
+      bottom: -35px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__select-span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__select {
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    font-size: 1rem;
+    color: inherit;
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__profile-btn {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.menu {
+  background-color: transparent;
+  outline-offset: 5px;
+  border: none;
+  width: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+
+  &__line {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+
+    &--middle {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    display: flex;
+  }
+}
